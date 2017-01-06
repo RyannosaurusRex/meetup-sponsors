@@ -1,0 +1,25 @@
+{
+    "sponsors" :[
+        {
+            "name": "Github",
+            "url" : "https://www.github.com",
+            "requestUrl" : "https://community.github.com/sponsorships",
+            "contactName" : "",
+            "contactEmail" : ""
+        },
+        {
+            "name": "Xamarin",
+            "url" : "https://www.xamarin.com",
+            "requestUrl" : "https://xamarinhq.wufoo.com/forms/k5p7h3q1u3dbcy/",
+            "contactName" : "",
+            "contactEmail" : ""
+        },
+        {
+        "name": "Manning Press",
+            "url" : "https://www.manning.com",
+            "requestUrl" : "https://www.manning.com/user-group",
+            "contactName" : "",
+            "contactEmail" : ""
+        }
+    ]
+}
