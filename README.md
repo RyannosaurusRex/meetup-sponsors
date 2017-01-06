@@ -4,9 +4,5 @@ I've been running TriJS for almost 3 years, and have been involved in local meet
 
 You can use the [editor on GitHub](https://github.com/RyannosaurusRex/meetupsponsors.github.io/edit/master/src/static/data.json) and create a pull request to submit a public sponsor that isn't already here.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Before committing, please run `npm run build` in order to generate the site (until I can get a proper build system set up.).
 
-### Sponsors
-
-- [Github](https://community.github.com/sponsorships)
-- [Xamarin](https://xamarinhq.wufoo.com/forms/k5p7h3q1u3dbcy/)
