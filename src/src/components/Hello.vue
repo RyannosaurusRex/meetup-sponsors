@@ -1,8 +1,10 @@
 <template>
   <div class="hello">
-
-
-    <input v-model="search">
+    <label for="txtSearch">Search: </label><input id="txtSearch" v-model="search">
+    <select v-model="searchSponsorshipType">
+      <option value=""></option>
+      <option v-for="type in sponsorTypes" v-bind:value="type">{{ type }}</option>
+    </select>
     <h1>{{ msg }}</h1>
     <ul>
       <li v-for="sponsor in filteredSponsors">
@@ -37,19 +39,39 @@ export default {
   data () {
     return {
       sponsors: {},
-      msg: 'Welcome to Your Vue.js App',
-      search: ''
+      msg: 'Find a sponsor for your meetup!',
+      search: '',
+      searchSponsorshipType: ''
     }
   },
   computed: {
     filteredSponsors: function () {
-      if (this.search === '') {
+      if (this.search === '' && this.searchSponsorshipType === '') {
         return this.sponsors
       }
       var self = this
-      return _.filter(this.sponsors, function (sponsor) {
-        return sponsor.name.toLowerCase().indexOf(self.search.toLowerCase()) !== -1
+
+      // Filter by search text.
+      var results = _.filter(this.sponsors, function (sponsor) {
+        if (self.search === '') {
+          return true
+        } else {
+          return sponsor.name.toLowerCase().indexOf(self.search.toLowerCase()) !== -1
+        }
       })
+
+      // Filter by sponsorship type
+      return _.filter(results, function (sponsor) {
+        if (self.searchSponsorshipType === '') {
+          return true
+        } else {
+          return sponsor.sponsorTypes.indexOf(self.searchSponsorshipType) !== -1
+        }
+      })
+    },
+    sponsorTypes: function () {
+      // Return the unique sponsor types that sponsors are tagged with.
+      return _.uniqBy([].concat.apply([], _.map(this.sponsors, 'sponsorTypes')))
     }
   }
 }
