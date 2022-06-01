@@ -17,12 +17,20 @@
             "sponsorTypes" : ["money", "software"]
         },
         {
-        "name": "Manning Press",
+            "name": "Manning Press",
             "url" : "https://www.manning.com",
             "requestUrl" : "https://www.manning.com/user-group",
             "contactName" : "",
             "contactEmail" : "",
             "sponsorTypes" : ["money", "books"]
-        }
+        },
+        {
+            "name": "Telerik",
+            "url" : "https://www.telerik.com",
+            "requestUrl" : "https://www.telerik.com/progress-developer-community-support",
+            "contactName" : "",
+            "contactEmail" : "",
+            "sponsorTypes" : ["money", "software", "food"]
+        },
     ]
 }
